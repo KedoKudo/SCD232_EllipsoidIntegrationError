@@ -2,7 +2,7 @@
 
 # ----- Project Macro ----- #
 UnitTestCategory := AllTests
-UnitTestName := MyAlgorithmTest
+UnitTestName := IntegratePeaksMD2Test
 TestScript := test.py
 
 # ------------------------------------------------------ #
