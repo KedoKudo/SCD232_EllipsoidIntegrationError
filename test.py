@@ -20,3 +20,11 @@ c = 0.013
 p=IntegratePeaksMD(InputWorkspace='ws', PeakRadius=[a,b,c], Ellipsoid=True, PeaksWorkspace='peaks', OutputWorkspace='ellipsoid')
 print("Integrate Intensity =", p.getPeak(0).getIntensity())
 print("Approx. Expected Intensity=", 4/3*np.pi*(a*b*c)*nevents*25**3)
+
+s=IntegratePeaksMD(
+InputWorkspace='ws',
+PeakRadius=a,
+PeaksWorkspace='peaks',
+OutputWorkspace='sphere')
+print("Integrate Intensity =", s.getPeak(0).getIntensity())
+print("Approx. Expected Intensity=", 4/3*np.pi*(a*a*a)*nevents*25**3)
